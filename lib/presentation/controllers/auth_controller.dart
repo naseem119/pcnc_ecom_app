@@ -97,17 +97,17 @@ class AuthController extends GetxController {
     try {
       final users = await _authService.fetchAllUsers();
 
-      // Loop through the users to see if the email already exists
+      // loop through the users to see if the email already exists
       for (var user in users) {
         if (user['email'].toLowerCase() == email.toLowerCase()) {
-          return false; // Email is already in use
+          return false; // email is already in use
         }
       }
 
-      return true; // Email is available
+      return true; // email is available
     } catch (e) {
       print("Error fetching users: $e");
-      return false; // In case of error, assume email is not available
+      return false; // in case of error, assume email is not available
     }
   }
 

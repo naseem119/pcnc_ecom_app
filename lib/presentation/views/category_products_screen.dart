@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pcnc_ecom_app/presentation/widgets/no_results_found_widget.dart';
+import 'package:pcnc_ecom_app/presentation/widgets/shared_widgets/no_results_found_widget.dart';
 import '../../data/models/product_model.dart';
 import '../../data/repositories/ecommerce_repository.dart';
-import '../widgets/product_card_widget.dart';
+import '../widgets/card_widgets/product_card_widget.dart';
 
 class CategoryProductsScreen extends StatelessWidget {
   final int categoryId;

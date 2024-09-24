@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pcnc_ecom_app/presentation/widgets/no_results_found_widget.dart';
+import 'package:pcnc_ecom_app/presentation/widgets/shared_widgets/no_results_found_widget.dart';
 import '../controllers/auth_controller.dart';
-import '../widgets/app_bar_widget.dart';
-import '../widgets/bottom_navigation_bar_widget.dart';
-import '../widgets/drawer_widget.dart';
-import '../widgets/floating_cart_button_widget.dart';
-import '../widgets/home_widget.dart';
+import '../widgets/dashboard_widgets/app_bar_widget.dart';
+import '../widgets/dashboard_widgets/bottom_navigation_bar_widget.dart';
+
+import '../widgets/dashboard_widgets/drawer_widget.dart';
+import '../widgets/dashboard_widgets/floating_cart_button_widget.dart';
+import '../widgets/shared_widgets/home_widget.dart';
 import 'search_screen.dart';
 
 class DashboardScreen extends StatefulWidget {

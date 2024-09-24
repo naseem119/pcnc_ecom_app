@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/category_controller.dart';
-import '../widgets/category_card.dart';
-import '../widgets/no_results_found_widget.dart';
+import '../widgets/card_widgets/category_card.dart';
+import '../widgets/shared_widgets/no_results_found_widget.dart';
 
 class CategoryScreen extends StatefulWidget {
   @override

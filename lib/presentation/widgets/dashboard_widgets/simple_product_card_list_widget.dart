@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pcnc_ecom_app/presentation/widgets/simple_product_card_widget.dart';
-import '../../data/models/product_model.dart';
+import 'package:pcnc_ecom_app/presentation/widgets/card_widgets/simple_product_card_widget.dart';
+import '../../../data/models/product_model.dart';
 
 class SimpleProductCardListWidget extends StatelessWidget {
   final Future<List<Product>> products;

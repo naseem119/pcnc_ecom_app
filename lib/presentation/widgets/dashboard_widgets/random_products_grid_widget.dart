@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pcnc_ecom_app/presentation/widgets/product_card_widget.dart';
-
-import '../../data/models/product_model.dart';
+import '../../../data/models/product_model.dart';
+import '../card_widgets/product_card_widget.dart';
 
 class RandomProductsGridWidget extends StatelessWidget {
   final Future<List<Product>> products;

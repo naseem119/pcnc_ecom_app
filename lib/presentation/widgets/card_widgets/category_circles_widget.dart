@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/category_controller.dart';
-import '../views/category_products_screen.dart';
+import '../../controllers/category_controller.dart';
+import '../../views/category_products_screen.dart';
 
 class CategoryCirclesWidget extends StatelessWidget {
   final CategoryController categoryController;

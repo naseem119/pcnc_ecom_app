@@ -4,9 +4,9 @@ import '../../data/models/category_model.dart';
 import '../../data/models/product_model.dart';
 import '../controllers/category_controller.dart';
 import '../controllers/product_controllers.dart';
-import '../widgets/category_card.dart';
-import '../widgets/simple_product_card_widget.dart';
-import '../widgets/no_results_found_widget.dart';
+import '../widgets/card_widgets/category_card.dart';
+import '../widgets/card_widgets/simple_product_card_widget.dart';
+import '../widgets/shared_widgets/no_results_found_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
