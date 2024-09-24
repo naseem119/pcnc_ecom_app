@@ -37,22 +37,55 @@ class CategoryCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(6.0), bottom: Radius.circular(4.0)),
-                    child: Image.network(
-                      category.imageUrl,
-                      height: imageHeight,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                      errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-                        // fallback image in case the network image fails
-                        return Image.asset(
-                          'assets/images/img_not_available.png',
-                          height: imageHeight,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        );
-                      },
+                  // gestureDetector for showing the image popup
+                  GestureDetector(
+                    onTap: () {
+                      // show full image in a popup
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Dialog(
+                            backgroundColor: Colors.transparent,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pop(); // close the dialog when tapped
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.network(
+                                  category.imageUrl,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                                    // fallback image in case the network image fails
+                                    return Image.asset(
+                                      'assets/images/img_not_available.png',
+                                      fit: BoxFit.cover,
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(6.0), bottom: Radius.circular(4.0)),
+                      child: Image.network(
+                        category.imageUrl,
+                        height: imageHeight,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                        errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                          // fallback image in case the network image fails
+                          return Image.asset(
+                            'assets/images/img_not_available.png',
+                            height: imageHeight,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                          );
+                        },
+                      ),
                     ),
                   ),
                   Expanded(
