@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2), () async {
-      final prefs = await SharedPreferences.getInstance();
-      final loggedIn = prefs.getBool('loggedIn') ?? false;
-      if (loggedIn) {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      String? token = prefs.getString('token');
+
+      if (token != null && token.isNotEmpty) {
         Get.offAllNamed('/dashboard');
       } else {
         Get.offAllNamed('/login');
